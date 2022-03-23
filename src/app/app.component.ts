@@ -3,18 +3,14 @@ import { UsersService } from './users.service';
 
 @Component({
   selector: 'my-app',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
 })
-export class AppComponent  {
-
-  data=[]
-  constructor(private user:UsersService){
-
-    this.user.getData().subscribe(data=>{
+export class AppComponent {
+  data:any=[];
+  constructor(private user: UsersService) {
+    this.user.getData().subscribe((data) => {
       console.warn(data);
-      this.data=data=[]
-    }
-
-  )}
-
+      this.data=data;
+    });
+  }
 }
