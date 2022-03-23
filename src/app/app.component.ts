@@ -8,8 +8,8 @@ import { UsersService } from './users.service';
 export class AppComponent {
   data: any = [];
 
-  constructor(private user: UsersService) {
-    this.user.getData().subscribe((results) => {
+  constructor(private item: UsersService) {
+    this.item.getData().subscribe((results) => {
       console.warn(results);
       this.data = results;
     });
